@@ -4,7 +4,6 @@ import (
 	"errors"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"net"
 	"strconv"
 	"time"
@@ -62,7 +61,7 @@ func (t transport) ReadStringAll() (s string, err error) {
 }
 
 func (t transport) ReadBytesAll() (raw []byte, err error) {
-	raw, err = ioutil.ReadAll(t.sock)
+	raw, err = io.ReadAll(t.sock)
 	debugLog(fmt.Sprintf("\r%s", raw))
 	return
 }

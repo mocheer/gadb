@@ -64,8 +64,8 @@ func TestDevice_Product(t *testing.T) {
 
 	for i := range devices {
 		dev := devices[i]
-		product := dev.Product()
-		t.Log(dev.Serial(), product)
+		t.Log(dev.Serial())
+		t.Log(dev.Product())
 	}
 }
 
@@ -82,7 +82,8 @@ func TestDevice_Model(t *testing.T) {
 
 	for i := range devices {
 		dev := devices[i]
-		t.Log(dev.Serial(), dev.Model())
+		t.Log(dev.Serial())
+		t.Log(dev.Model())
 	}
 }
 
@@ -99,7 +100,9 @@ func TestDevice_Usb(t *testing.T) {
 
 	for i := range devices {
 		dev := devices[i]
-		t.Log(dev.Serial(), dev.Usb(), dev.IsUsb())
+		t.Log(dev.Serial())
+		t.Log(dev.Usb())
+		t.Log(dev.IsUsb())
 	}
 
 }
